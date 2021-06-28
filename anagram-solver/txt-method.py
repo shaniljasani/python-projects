@@ -48,8 +48,11 @@ def anagram_solver():
     possible_options = list(set(possible_options))
 
     # sort and print
-    sorted_options = sorted(possible_options, key=len)
-    for option in sorted_options[::-1]:
+
+    sorted_options = sorted(possible_options)
+    sorted_options = sorted(sorted_options, key=len, reverse=True)
+
+    for option in sorted_options:
         print(option)
 
     end = time.time()
